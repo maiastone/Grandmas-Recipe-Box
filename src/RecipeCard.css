@@ -1,0 +1,14 @@
+.card {
+  border: 5px solid #738986;
+  background-color: #e2d4ac;
+  color: #738986;
+  width: 50%;
+  padding: 15px;
+}
+
+ul {
+  padding-left: 25px;
+}
+li {
+  text-align: left;
+}
