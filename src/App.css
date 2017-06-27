@@ -8,10 +8,10 @@
 }
 
 .App-header {
-  background: #91a16a;
+  background: #35999e;
   height: 90px;
   padding: 20px;
-  color: #b36154;
+  color: #ccffe9;
   font-size: 32px;
 }
 
@@ -21,9 +21,4 @@ h2 {
 
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
