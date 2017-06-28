@@ -6,16 +6,33 @@ import recipes from './recipes.js'
 
 class App extends Component {
 
+  constructor() {
+    super();
+    this.state = {
+      filteredRecipes: [],
+    }
+  }
 
+  filterByCategory(e, category) {
+    let filteredRecipes = [];
+    recipes.filter((recipe) => {
+      if (recipe.category === e.target.innerHTML.toLowerCase())
+      filteredRecipes.push(recipe)
+      }
+    )
+    this.setState({
+      filteredRecipes: filteredRecipes,
+    })
+  }
 
 
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Family Recipes</h2>
+          <h2>Grandma&#39;s Recipe Box</h2>
         </div>
-        <DropDown recipes={recipes}/>
+        <DropDown filterByCategory={this.filterByCategory.bind(this)}/>
         <RecipeCard />
       </div>
     );
