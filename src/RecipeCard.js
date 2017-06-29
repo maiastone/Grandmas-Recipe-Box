@@ -3,10 +3,11 @@ import './RecipeCard.css';
 import recipes from './recipes.js'
 
 
-const RecipeCard = () => {
+const RecipeCard = (props) => {
 
+const {filteredRecipes} = props;
 
-const recipe = recipes.map((recipe) => {
+const recipe = filteredRecipes.map((recipe) => {
   return (
       <div className='card'>
         <h1>{recipe.name}</h1>

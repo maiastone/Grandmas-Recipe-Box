@@ -13,6 +13,7 @@ class App extends Component {
     }
   }
 
+
   filterByCategory(e, category) {
     let filteredRecipes = [];
     recipes.filter((recipe) => {
@@ -21,7 +22,7 @@ class App extends Component {
       }
     )
     this.setState({
-      filteredRecipes: filteredRecipes,
+      filteredRecipes,
     })
   }
 
@@ -33,7 +34,7 @@ class App extends Component {
           <h2>Grandma&#39;s Recipe Box</h2>
         </div>
         <DropDown filterByCategory={this.filterByCategory.bind(this)}/>
-        <RecipeCard />
+        <RecipeCard filteredRecipes={this.state.filteredRecipes}/>
       </div>
     );
   }

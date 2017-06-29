@@ -3,7 +3,6 @@ import recipes from './recipes.js'
 
 class DropDown extends Component {
   constructor(props) {
-    console.log(props);
       super(props);
       this.toggleMenu = this.toggleMenu.bind(this);
       this.state = {
@@ -36,7 +35,7 @@ class DropDown extends Component {
 
     return (
       <div>
-      <button onClick={this.toggleMenu}>Filter by Category</button>
+      <button onClick={this.toggleMenu}>Categories</button>
       {menu}
       </div>
     );
